@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contenuto</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 20px;
+    }
+
+    .content {
+      margin: 20px 0;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      background-color: #f9f9f9;
+    }
+  </style>
+</head>
+<body>
+  <h1>Contenuto Dinamico</h1>
+  <div class="content" id="content-box">
+    <p>Premi un bottone per cambiare il contenuto!</p>
+  </div>
+
+  <script>
+    const contentBox = document.getElementById('content-box');
+
+    function updateContent(section) {
+      let content = '';
+      switch (section) {
+        case 'home':
+          content = '<h2>Home</h2><p>Benvenuto nella nostra homepage!</p>';
+          break;
+        case 'about':
+          content = '<h2>About</h2><p>Scopri di più su di noi in questa sezione.</p>';
+          break;
+        case 'services':
+          content = '<h2>Services</h2><p>Offriamo una vasta gamma di servizi per soddisfare le tue esigenze.</p>';
+          break;
+        case 'contact':
+          content = '<h2>Contact</h2><p>Contattaci per ulteriori informazioni!</p>';
+          break;
+        default:
+          content = '<p>Sezione non trovata.</p>';
+      }
+      contentBox.innerHTML = content;
+    }
+
+    window.addEventListener('message', (event) => {
+      updateContent(event.data);
+    });
+  </script>
+</body>
+</html>

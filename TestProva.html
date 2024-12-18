@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Timer Site</title>
+    <link rel="stylesheet" href="styleProva.css">
+</head>
+<body>
+    <header>
+        <h1>Test Timer Site</h1>
+        <p>Tempo impiegato: <span id="timer">0</span> secondi</p>
+    </header>
+
+    <div class="button-container">
+        <button id="test1-button">Test1</button>
+        <button id="test2-button">Test2</button>
+        <button id="test3-button">Test3</button>
+        <button id="testoA-button">TestoA</button>
+        <button id="testoB-button">TestoB</button>
+        <button id="end-test-button">Fine Test</button>
+    </div>
+
+
+    <div id="content"></div>
+
+    <div id="form-container" style="display:none;">
+        <h2>Risultati</h2>
+        <p>Tempo totale: <span id="final-time"></span> secondi</p>
+        <form>
+            <label for="feedback">Inserisci il tuo feedback:</label><br>
+            <textarea id="feedback" rows="4" cols="50"></textarea><br>
+            <button type="submit">Invia</button>
+        </form>
+    </div>
+    
+    <script src="scriptProva.js"></script>
+</body>
+</html>
+
