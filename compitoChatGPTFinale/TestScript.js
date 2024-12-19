@@ -18,7 +18,7 @@ const testData = {
     Test3: {
         title: 'Test 3',
         question: 'Questa è la domanda del Test 3.',
-    },
+    }
 };
 
 // Funzione per aggiornare il contenuto dinamico in base al test
@@ -42,15 +42,5 @@ window.onload = function() {
     if (savedAnswer) {
         document.getElementById('test-answer').value = savedAnswer;
     }
-
-    // Avvia il timer
-    startTimer();
 };
 
-// Funzione per avviare il timer
-function startTimer() {
-    interval = setInterval(() => {
-        timer++;
-        document.getElementById('timer').innerText = timer;
-    }, 1000);
-}
